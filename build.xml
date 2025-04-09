@@ -1,0 +1,18 @@
+<project>
+<target name="compile">
+<mkdir dir="classes"/>
+<javac srcdir="src" destdir="classes"/>
+</target>
+<target name="jar">
+<mkdir dir="jar"/>
+<jar destfile="jar/Main.jar" basedir="classes">
+<manifest>
+<attribute name="Main-Class" value="HelloAnt"/>
+</manifest>
+
+</jar>
+</target>
+<target name="run">
+<java jar="jar/Main.jar" fork="true"/>
+</target>
+</project>

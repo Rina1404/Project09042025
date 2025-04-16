@@ -1,4 +1,4 @@
-<project name="Application" default="all">
+<project name="Main" default="all">
 <target name="all" depends="clean, compile, jar"/>
 <!--   Указываем директорию исходников Ок   -->
 <property name="src.dir" value="src"/>

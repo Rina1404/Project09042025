@@ -33,7 +33,7 @@
         <mkdir dir="${jar.dir}"/>
         <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}">
             <manifest>
-                <attribute name="Main-Class" value="com.example.MainApp"/> <!-- Исправьте на реальный класс! -->
+                <attribute name="Main-Class" value="${ant.project.name}"/>
             </manifest>
         </jar>
     </target>

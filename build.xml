@@ -11,6 +11,12 @@
 <echo> clean </echo>
 <delete dir="${build.dir}"/>
 </target>
+<target name="prepare">
+        <echo message="Подготовка директорий..."/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${jar.dir}"/>
+</target>
 <!--   Задача для компиляции исходных файлов Ок   -->
 <target name="compile" depends="clean">
 <mkdir dir="${classes.dir}"/>

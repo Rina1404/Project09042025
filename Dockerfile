@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine   
+FROM openjdk:8-jdk-alpine
 RUN apk add --no-cache git 
 
 RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.12-bin.tar.gz \
@@ -8,8 +8,8 @@ RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.12-bin.tar
 ENV ANT_HOME=/usr/local/ant
 ENV PATH=${ANT_HOME}/bin:${PATH}
 RUN git clone https://github.com/Rina1404/Project09042025.git ProjectMain12
-#RUN git clone https://github.com/FursevichYury/Projekt-07-04-2025.git ProjectMain
 WORKDIR /ProjectMain12
 RUN ant
 
 CMD ["java", "-jar", "/ProjectMain12/build/jar/Main.jar"]
+
